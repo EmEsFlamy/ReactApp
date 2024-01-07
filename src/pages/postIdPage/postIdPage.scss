@@ -1,0 +1,33 @@
+.postId {
+    margin: 50px auto 0 auto;
+    text-align: center;
+    width: 1140px;
+    padding: 0 10px;
+    &__title {
+        font-size: 15px;
+        margin: 10px;
+        &-id {
+            font-weight: bold;
+        }
+        span {
+            font-weight: bold;
+        }
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        border: 1px solid #c1c1c1;
+        border-radius: 12px;
+        margin-top: 15px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 0 0 10px #c1c1c1;
+        div {
+            font-style: italic;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    }
+}
