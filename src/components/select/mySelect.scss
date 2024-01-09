@@ -1,0 +1,15 @@
+.mySelect {
+    width: 150px;
+    height: 30px;
+    padding: 5px 15px;
+    border: 1px solid #e5ebf1;
+    background-color: #e5ebf1;
+    color: #246297;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    &:hover {
+        background-color: #cad6e3;
+    }
+}
