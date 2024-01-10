@@ -1,0 +1,39 @@
+.userslist {
+    margin-top: 50px; 
+}
+  
+  .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: auto; 
+    padding: 10px;
+    background-color: #f9f9f9;
+    width: 80%;
+  }
+  
+  
+  .list span {
+    margin-bottom: 8px; 
+  }
+  
+ 
+  .list button {
+    cursor: pointer;
+    background-color: rgb(2, 59, 2);
+    color: #f0f3f5;
+    border: 1px solid #e5ebf1;
+    border-radius: 6px;
+    font-size: 13px;
+    width: 150px;
+    height: 30px;
+        &:hover {
+            background-color: #0c5ca1;
+    }
+    &__big {
+        width: 100%;
+    }
+}

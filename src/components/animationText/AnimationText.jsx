@@ -8,7 +8,7 @@ const AnimationText = () => {
             <svg viewBox="0 0 960 300" className="animationBlock-svg">
                 <symbol id="s-text">
                     <text textAnchor="middle" x="50%" y="80%">
-                       Projekt React 
+                       Social Connect 
                     </text>
                 </symbol>
                 <g className="g-ants">

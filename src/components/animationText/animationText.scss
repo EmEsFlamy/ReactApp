@@ -3,7 +3,7 @@
     padding: 0 10px;
     margin:  0 auto;
     display: flex;
-    /*   border:1px solid red; */
+    // border:1px solid red; 
     height: 100%;
     align-items: center;
     &-svg {
@@ -59,7 +59,7 @@
 }
 
 .text-copy:nth-child(3){
-    stroke: #246297;
+    stroke: rgb(1, 49, 1);
     animation-delay: -3s;
 }
 

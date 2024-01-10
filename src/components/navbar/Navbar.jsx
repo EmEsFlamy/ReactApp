@@ -23,6 +23,9 @@ const Navbar = () => {
                     <li className="navbar__item">
                         <Link to='/posts' className="navbar__link">Posty</Link>
                     </li>
+                    <li className="navbar__item">
+                        <Link to='/users' className="navbar__link">Użytkownicy</Link>
+                    </li>
                 </ul>
                 {isAuth && <MyButton onClick={logout}>Wyloguj</MyButton>}
             </div>
