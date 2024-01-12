@@ -1,17 +1,13 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Album from "../API/AlbumService";
-import NavBar from "../components/navbar/Navbar";
-
-
 
 const Albums = () => {
-    const [albums,setAlbums] =useState([]);
-    useEffect(() => {
-        fetchData();
-    }, []);
+  const [albums, setAlbums] = useState([]);
+  useEffect(() => {
+    fetchData();
+  }, []);
 
-
-const fetchData = async () => {
+  const fetchData = async () => {
     await fetch("https://jsonplaceholder.typicode.com/albums")
       .then((res) => res.json())
       .then((data) => setAlbums(data))
@@ -20,18 +16,17 @@ const fetchData = async () => {
       });
   };
 
-  
   return (
     <div>
-        {albums.map((album) => (
-            <Album 
-                userId={album.userId}
-                key={album.userId}
-                title={album.title}
-                id={album.id}
-            />
-        ))}
+      {albums.map((album) => (
+        <Album
+          userId={album.userId}
+          key={album.userId}
+          title={album.title}
+          id={album.id}
+        />
+      ))}
     </div>
-  )
-  }
-  export default Albums;
+  );
+};
+export default Albums;

@@ -9,7 +9,8 @@ import "../scss/general-style.scss";
 const Login = () => {
   const { isAuth, setIsAuth } = useContext(AuthContext);
   const [users, setUsers] = useState([]);
-  const [userEmail, setUserEmail] =useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [loginError, setLoginError] = useState(false);
 
   useEffect(() => {
     fetchData();
@@ -17,9 +18,15 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if(users.find((user) => user.email === userEmail)) {
+
+    const user = users.find((user) => user.email === userEmail);
+
+    if (user) {
       setIsAuth(userEmail);
-      localStorage.setItem('auth', JSON.stringify(userEmail))
+      localStorage.setItem("auth", JSON.stringify(userEmail));
+      setLoginError(false); 
+    } else {
+      setLoginError(true); 
     }
   };
 
@@ -36,10 +43,17 @@ const Login = () => {
     <div style={{ marginTop: 70, textAlign: "center" }}>
       <h1>Logowanie</h1>
       <form onSubmit={handleLogin} className="form__login">
-        <MyInput type="email" placeholder="Email" onChange={(e) => {
-          setUserEmail(e.target.value)
-        }} />
+        <MyInput
+          type="email"
+          placeholder="Email"
+          onChange={(e) => {
+            setUserEmail(e.target.value);
+            setLoginError(false); 
+          }}
+        />
+        {loginError && <p style={{ color: "red" }}>Niepoprawny e-mail.</p>}
         <MyButton>Zaloguj</MyButton>
+        
       </form>
     </div>
   );

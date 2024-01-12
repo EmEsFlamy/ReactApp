@@ -17,7 +17,7 @@ const PostForm = ({create}) => {
 	const addNewPost = (e) => {
 		e.preventDefault();
         if (!post.title || !post.body) {
-            setError('Both title and body are required.');
+            setError('Tytuł oraz opis nie może być pusty.');
             return;
           }
         const newPost = {...post, id: Date.now()};

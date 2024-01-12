@@ -29,7 +29,7 @@ const Users = () => {
     
 
     if (!name || !email || !username) {
-      alert("Name, email, and username are required.")
+      alert("Imie, nazwa użytkownika oraz e-mail nie mogą być puste.")
     return;
     }
 
