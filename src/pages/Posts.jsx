@@ -67,7 +67,7 @@ const Posts = () => {
 			<hr style={{margin: '65px 0 23px 0'}} />
 			<h1 style={{textAlign: 'center', marginBottom: '20px'}}>Posty użytkowników</h1>
 			<PostFilter 
-				filter={filter} 
+				filter={filter}
 				setFilter={setFilter}
 				setModal={setModal}
 			/>

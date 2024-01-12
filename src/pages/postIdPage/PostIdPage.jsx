@@ -12,6 +12,7 @@ const PostIdPage = () => {
     const params = useParams();
     const [post, setPost] = useState({});
     const [comments, setComments] = useState([]);
+    const [user, setUser] = useState(null);
 
     const [fetchPostById, isLoading, error] = useFething(async (id) => {
         const responce = await PostService.getById(id);
@@ -24,13 +25,21 @@ const PostIdPage = () => {
     });
 
     useEffect(() => {
+        const storedUser = localStorage.getItem('auth');
+  console.log('Stored user:', storedUser);
+
+  if (storedUser) {
+    setUser({ email: storedUser });
+  }
         fetchPostById(params.id);
         fetchComments(params.id);
-    }, []);
+    }, [params.id]);
 
     return (
         <div className='postId'>
-            <hr style={{margin: '65px 0 15px 0'}} />
+            {user && <div>Zalgowany jako: {user.email}</div>}
+            <hr style={{margin: '45px 0 15px 0'}} />
+            
             <div className='postId__title-id'>Post o ID = {params.id}</div>
             {isLoading 
                 ?
@@ -54,6 +63,8 @@ const PostIdPage = () => {
                         )}
                     </div>
             }
+            
+
         </div>
     );
 };

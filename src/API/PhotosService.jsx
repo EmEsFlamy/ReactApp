@@ -13,4 +13,7 @@ export default class PhotosSerivce {
         const response = await axios.get(`https://jsonplaceholder.typicode.com/albums/${id}/photos`);
         return response;
     }
+
 }; 
+
+

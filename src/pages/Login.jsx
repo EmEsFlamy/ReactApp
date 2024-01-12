@@ -19,7 +19,7 @@ const Login = () => {
     e.preventDefault();
     if(users.find((user) => user.email === userEmail)) {
       setIsAuth(userEmail);
-      localStorage.setItem('auth', userEmail)
+      localStorage.setItem('auth', JSON.stringify(userEmail))
     }
   };
 
