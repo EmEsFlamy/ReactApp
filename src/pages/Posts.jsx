@@ -19,7 +19,7 @@ const Posts = () => {
 	const [page, setPage] = useState(1);				
 	const lastElement = useRef();						
 	const observer = useRef();							
-	console.log(lastElement);
+	
 
 	const [fetchPosts, isPostLoading, postError] = useFething(async (limit, page) => {
 		const response = await PostService.getAll(limit, page);
@@ -33,10 +33,10 @@ const Posts = () => {
 		if (observer.current) observer.current.disconnect();
 		let callback = function(entries, observer) {
 			if (entries[0].isIntersecting && page < totalPages) {
-				console.log(page);
+				
 				setPage(page + 1);
 			}
-			console.log(entries);
+			
 
 		}
 		observer.current = new IntersectionObserver(callback);

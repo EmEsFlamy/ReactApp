@@ -17,7 +17,6 @@ const User = ({id,email,name,username,onDelete}) => {
             <span>Email: {email}</span>
             <span></span>
             <span>
-                <button>Otwórz</button>
                 <button>Edytuj</button>
                 <button onClick={handleDelete}>Usuń</button>
             </span>

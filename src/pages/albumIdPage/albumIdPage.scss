@@ -1,0 +1,63 @@
+.albumId__item {
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: center; 
+}
+
+.albumId__item h5 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.albumId__item img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px; 
+    display: block;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+.albumId__item img:hover {
+    transform: scale(1.1); 
+}
+
+
+.albumId__item-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 15px; 
+}
+
+.albumId__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+}
+
+.albumId__title span {
+    color: #007bff; 
+    margin-right: 5px;
+}
+
+.albumId__title-id {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+}
